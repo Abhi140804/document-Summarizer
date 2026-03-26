@@ -11,12 +11,6 @@ Upload a PDF and get:
 
 Built with **Node.js + Express** on the backend and vanilla **HTML/CSS/JS** on the frontend.
 
-## 📝 Description
-
-PDF Document Summarizer is a beginner-friendly web application that helps you quickly understand long documents without reading every page. After uploading a PDF, the app extracts its text and returns a structured summary view with an overview, key topics, important points, and keywords.
-
-It is designed for lightweight local use (students, quick reviews, internal docs) and focuses on speed and readability rather than AI-generated rewriting.
-
 ---
 
 ## ✨ Features
