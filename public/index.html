@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Summarizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">Readable in seconds</p>
+        <h1>Turn dense PDFs into clear summaries.</h1>
+        <p class="lede">
+          Upload a text-based PDF and get an instant overview, key takeaways, and keyword signals in one screen.
+        </p>
+      </section>
+
+      <section class="panel">
+        <form id="upload-form" class="upload-form">
+          <label for="pdf" class="dropzone">
+            <input id="pdf" name="pdf" type="file" accept="application/pdf" required />
+            <span class="dropzone-title">Choose a PDF</span>
+            <span class="dropzone-subtitle">Maximum file size: 10 MB</span>
+          </label>
+          <button type="submit" id="submit-button">Summarize PDF</button>
+        </form>
+
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <section id="results" class="results hidden">
+          <div class="results-header">
+            <div>
+              <p class="results-label">Document</p>
+              <h2 id="document-name">Summary</h2>
+            </div>
+            <div class="stat-grid">
+              <article>
+                <span>Pages</span>
+                <strong id="page-count">0</strong>
+              </article>
+              <article>
+                <span>Words</span>
+                <strong id="word-count">0</strong>
+              </article>
+              <article>
+                <span>Sentences</span>
+                <strong id="sentence-count">0</strong>
+              </article>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <article class="card card-primary">
+              <p class="card-label">Overview</p>
+              <p id="overview-text" class="overview-text"></p>
+            </article>
+
+            <article class="card">
+              <p class="card-label">Important Topics</p>
+              <div id="important-topics" class="topics"></div>
+            </article>
+
+            <article class="card">
+              <p class="card-label">Important Points</p>
+              <ul id="important-points" class="reading-list"></ul>
+            </article>
+
+            <article class="card">
+              <p class="card-label">Point Summary</p>
+              <ul id="point-summaries" class="summary-list"></ul>
+            </article>
+
+            <article class="card">
+              <p class="card-label">Keywords</p>
+              <div id="keywords" class="keywords"></div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

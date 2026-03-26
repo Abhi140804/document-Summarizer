@@ -1,0 +1,21 @@
+{
+  "name": "pdf-summarizer",
+  "version": "1.0.0",
+  "description": "Upload a PDF and get a structured summary.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "pdf",
+    "summary",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.0.2",
+    "pdf-parse": "^1.1.1"
+  }
+}
